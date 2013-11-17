@@ -7,6 +7,9 @@
 # compared with my other projects there were no tables being 
 # created. Running heroku run rake db:migrate created the migration
 # successfully and then the menus were displayed.
+#
+# Tests will now be run using:
+# bundle exec rspec spec
 
 require 'rake'
 
@@ -141,7 +144,6 @@ task "console" do
   exec "irb -r./config/environment"
 end
 
-# bundle exec rspec spec
 # desc "Run the specs"
 # RSpec::Core::RakeTask.new(:spec)
 
