@@ -1,3 +1,16 @@
+# There were two sections of the Rakefile that broke heroku's 
+# database migration. The first was require 'rspec/core/rake_task'
+# and this went with the custom raketask "rake spec". 
+# The signs for this were looking at the logfile, we could see
+# errors about activerecord when trying to access the menu
+# Going into the database section of the heroku app showed that
+# compared with my other projects there were no tables being 
+# created. Running heroku run rake db:migrate created the migration
+# successfully and then the menus were displayed.
+#
+# Tests will now be run using:
+# bundle exec rspec spec
+
 require 'rake'
 
 require ::File.expand_path('../config/environment', __FILE__)
@@ -131,7 +144,6 @@ task "console" do
   exec "irb -r./config/environment"
 end
 
-# bundle exec rspec spec
 # desc "Run the specs"
 # RSpec::Core::RakeTask.new(:spec)
 
