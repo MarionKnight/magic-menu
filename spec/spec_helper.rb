@@ -13,6 +13,11 @@ require 'rack/test'
 
 RSpec.configure do |config|
   config.include Rack::Test::Methods
+
+  config.before do
+    Menu.destroy_all
+  end
+
 end
 
 def app
