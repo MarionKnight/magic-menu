@@ -20,3 +20,4 @@ def app
 end
 
 require 'capybara/rspec'
+

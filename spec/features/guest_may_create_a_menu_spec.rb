@@ -1,3 +1,12 @@
+# This is failing on: 
+
+# ArgumentError:
+#   rack-test requires a rack application, but none was given
+
+# This comes from the ENV and complex for me to debug right now
+
+# ToDo: What is rack-test, why require rack app, how capybara runs
+
 require 'spec_helper'
 
 feature "Creating a menu" do
