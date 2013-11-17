@@ -2,6 +2,9 @@
 
 http://magic-menu.herokuapp.com
 
+Implemented for:
+https://github.com/fox-squirrels-2013/magic-menu/blob/master/README.md
+
 Author: Marion Knight, knight499@gmail.com
 
 ## Release 0: Copy the skeleton and push branch to heroku
