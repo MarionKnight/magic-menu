@@ -8,11 +8,14 @@ require 'rubygems'
 ENV['RACK_ENV'] ||= 'test'
 
 require File.expand_path("../../config/environment", __FILE__)
+require 'capybara/rspec'
 require 'shoulda-matchers'
 require 'rack/test'
 
 RSpec.configure do |config|
   config.include Rack::Test::Methods
+  Capybara.app = Sinatra::Application
+  config.include Capybara::DSL
 
   config.before do
     Menu.destroy_all
@@ -23,6 +26,3 @@ end
 def app
   Sinatra::Application
 end
-
-require 'capybara/rspec'
-
