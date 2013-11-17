@@ -4,3 +4,8 @@ Tests to run on release1 menus:
 (2) shoulda: clicking on add menu should add the menu to the table
 (3) capybara: after clicking, you should be routed to menu/:id which contains 
 	"menu_name Menu"
+
+# The documentation:
+
+https://github.com/rspec/rspec-rails
+https://www.relishapp.com/rspec/rspec-rails/v/3-0/docs/feature-specs/feature-spec
