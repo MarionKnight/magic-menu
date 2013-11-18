@@ -24,7 +24,7 @@ describe "web requests" do
   end
 
   it "adds an item to the breakfast menu" do
-    params = { { 'name' => "Eggs", 'price' => "$4.99" }, { { 'name' => "Steak", 'price' => "9.99" } }    
+    params = { 'item' => { 'name' => "Steak", 'price' => "9.99" } }    
     expect { post '/menus/1', params }.to change { Menu.Item.length }.by(1)
   end
 end
