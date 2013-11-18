@@ -5,7 +5,11 @@
 # errors about activerecord when trying to access the menu
 # Going into the database section of the heroku app showed that
 # compared with my other projects there were no tables being 
-# created. Running heroku run rake db:migrate created the migration
+# created. Running:
+#
+# heroku run rake db:migrate 
+#
+# created the migration
 # successfully and then the menus were displayed.
 #
 # Tests will now be run using:
