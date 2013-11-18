@@ -8,6 +8,13 @@
 
 <table>
   <tr><td>Items</td><td></td></tr>
+<% @menu.items.each do |x| %>
+<tr>
+  <td><%= x.name %></td>
+  <td><%= x.price %></td>
+</tr>
+<% end %>
+</table>
 
 <table>
   <tr><td>Menu Items</td><td></td></tr>

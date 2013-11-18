@@ -16,10 +16,13 @@ Ruby app. From the command line used:
 
 > git push heroku saturday-fun:master. (My branch:master).
 
-## Release 1: Make the menu DB, views, test with rspec, shoulda, capybara
+> heroku run rake db:migrate 
 
-Views: 
-/menus/new: create a new menu
-/menus/:menu_id: display a particular menu
-/items: display the items that can be on menus
+Didn't need but useful for reference:
+> heroku logs
+> heroku pg:reset DATABASE
+> heroku pg:info
+> heroku pg:psql
+
+also, "> git add -A" never "> git add .""
 
