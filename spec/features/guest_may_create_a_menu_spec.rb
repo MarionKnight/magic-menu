@@ -14,10 +14,10 @@ end
 feature "Creating an item" do
   scenario "Guest may create an item" do
     visit '/items'
-    fill_in "name", with: "Ramen"
+    fill_in "name", with: "Eggs"
     fill_in "price", with: "8.98"
     click_on "Add Item"
 
-    expect(page).to have_content("Ramen")
+    expect(page).to have_content("Eggs")
   end
 end

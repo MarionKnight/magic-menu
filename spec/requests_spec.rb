@@ -18,8 +18,8 @@ describe "web requests" do
   end
 
   it "creates an item with a price" do
-    params = { 'name' => "Ramen", 'price' => "$8.98" }
+    params = { 'name' => "Eggs", 'price' => "$8.98" }
     post '/items', params
-    Item.last.price.should == 8.98
+    Item.last.price.should == "$8.98"
   end
 end
