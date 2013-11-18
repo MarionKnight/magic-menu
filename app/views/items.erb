@@ -1,0 +1,24 @@
+<form action='/items' method='post'>
+  <input type='text' name='name'>
+  <input type='price' name='price'>
+  <input type='submit' value="Add Item">
+</form>
+<br>
+<h3>Your Items:</h3>
+
+<table>
+  <tr><td>name</td><td>price</td></tr>
+  <% @items.each do |item| %>
+  <tr>
+    <td><%= item.name %></td>
+    <td><%= item.price %></td>
+  </tr>
+  <% end %><hr>
+</table>
+
+<h5>
+<ul>
+  <li>enter an item name and price and click "Add Item"</li>
+  <li>item name and price are appended to the table as a new row</li>
+</ul>
+</h5>
