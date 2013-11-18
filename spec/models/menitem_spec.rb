@@ -4,11 +4,11 @@ require 'spec_helper'
 # THESE TESTS SEEM A LITTLE SILLY; NOT SURE WHAT TO TEST
 # IN A JOIN TABLE FOR VALIDATIONS AT THIS POINT
 
-describe Menitem do
+# describe Menitem do
 
-  describe "validations" do
-    it { should validate_presence_of :menu_id }
-    it { should validate_presence_of :item_id }
-  end
+#   describe "validations" do
+#     it { should validate_presence_of :menu_id }
+#     it { should validate_presence_of :item_id }
+#   end
 
-end
+# end
