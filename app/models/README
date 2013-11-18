@@ -3,3 +3,32 @@ Add your ActiveRecord models here.
 You can create them by being in the application root directory and running, e.g.,
 
 rake generate:model NAME=User
+
+Notes on the ActiveRecord associations:
+> Menu.create({name: "Snack"})
+> Item.create({name: "Coffee", price: "$1.95"})
+> mmenu = Menu.last
+> mitem = Item.last
+> mmenu.items << mitem
+> Menitem.all
+
+1.9.3-p374 :030 > Menitem.all
+D, [2013-11-17T18:26:16.477497 #87231] DEBUG -- :   Menitem Load (0.7ms)  SELECT "menitems".* FROM "menitems" 
+ => [#<Menitem id: 1, menu_id: 2, item_id: 2, created_at: "2013-11-17 18:22:11", updated_at: "2013-11-17 18:22:11">] 
+
+Only creates the cookie, not the menitem: 
+ > Menu.create({name: "Snack"}).items << Item.create({name: "cookie", price: "free"})
+
+Create the cookie first: 
+=> still doesn't create the menitem
+
+To create the join record, need to have the object for each and then:
+
+> a_menu = Menu.last
+> an_item = Item.last
+> a_menu.items << an_item 
+
+<% @the_menu_record[0].items.each do |item| %>
+  <%= item.name %>
+  <%= item.price %>
+<% end %>
