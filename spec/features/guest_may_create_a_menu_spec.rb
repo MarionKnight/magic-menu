@@ -21,3 +21,13 @@ feature "Creating an item" do
     expect(page).to have_content("Eggs")
   end
 end
+
+feature "Adding an item to the menu" do
+  scenario "Guest may add an item to a menu" do
+    visit '/items/1'
+    select name: "Steak"
+    select price: "9.99"
+
+    expect(Items).to have_content("Steak")
+  end
+end
